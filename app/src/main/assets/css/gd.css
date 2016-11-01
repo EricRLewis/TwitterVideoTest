@@ -1,0 +1,576 @@
+/* apollo.scss - Base file with imports */
+/* vars.scss - css config */
+/* reset.scss - Base reset styles */
+/*** Imported from reset.css ***/
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b, strong {
+  font-weight: bold; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+body {
+  font-size: 1.000em;
+  /* Our Base Font is in EM, everything else should be a percentage */
+  margin: 0;
+  padding: 0 0 0 0;
+  background: #F5F5F5;
+  color: #030303; }
+
+a {
+  color: #009bff;
+  text-decoration: none; }
+
+a.internal {
+  -webkit-touch-callout: none; }
+
+img {
+  border: none; }
+
+.asset {
+  clear: both;
+  margin: 1.48438rem 0;
+  padding: 0 1.5625rem;
+  font-size: 1rem; }
+
+.asset-photo {
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
+  line-height: 1.3; }
+  .asset-photo img {
+    display: block; }
+
+.asset-photo-credit {
+  color: #010101;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
+  font-size: 0.7rem;
+  font-style: italic;
+  padding-top: 7.5px;
+  display: none; }
+
+.asset-photo-caption {
+  background: #fff;
+  padding: 15px;
+  font-size: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1; }
+  .asset-photo-caption a {
+    font-weight: bold; }
+  .asset-photo-caption .asset-photo-credit {
+    display: inline;
+    font-size: 0.75rem; }
+
+.blog-logo {
+  padding: 0 1.5625rem; }
+  .blog-logo img {
+    max-width: 175px;
+    margin-top: 20px; }
+
+.presto-h1,
+.presto-h2,
+.presto-h3,
+.presto-h4,
+.presto-h5,
+.presto-h6 {
+  margin: 20px 0;
+  padding: 0 1.5625rem;
+  font-size: 1.2rem;
+  font-family: "Futura Today Bold", "Futura Today Screen", Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+.story-byline {
+  color: #999999;
+  font-size: 0.9rem;
+  font-family: "Futura Today Screen", Helvetica, sans-serif; }
+
+.story-headline {
+  color: #010101;
+  font-family: "Futura Today Demibold", "Futura Today Screen", "HelveticaNeue-Light", Helvetica, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0.625rem 0;
+  padding: 0 1.5625rem; }
+
+.story-header {
+  font-family: "Futura Today Light", "Futura Today Screen", "HelveticaNeue-Light", Helvetica, sans-serif;
+  padding: 0 1.5625rem;
+  margin: 10px 0 20px 0;
+  line-height: 1.2rem; }
+
+.story-header-spliter {
+  color: #DDDDDD;
+  display: none; }
+
+.story-footer {
+  margin-bottom: 25px;
+  clear: both; }
+
+.story-lede .asset {
+  margin: 0.5rem 0; }
+.story-lede .asset-photo-credit {
+  display: block; }
+.story-lede .asset-photo-caption {
+  display: none; }
+
+.story-body {
+  color: #010101;
+  font-family: "HelveticaNeue", "Segoe UI", "Roboto", "HelveticaNeue-Light", Helvetica, sans-serif;
+  line-height: 1.5em; }
+  .story-body > aside, .story-body > blockquote, .story-body > p {
+    margin: 20px 0;
+    padding: 0 1.5625rem; }
+  .story-body > ul {
+    margin-left: 1.5625rem;
+    padding: 0 1.5625rem; }
+    .story-body > ul li {
+      margin: 20px 0; }
+
+.story-subsection {
+  text-transform: capitalize; }
+
+.story-series {
+  padding: 0 1.5625rem;
+  margin: 0.938rem 0 0 0; }
+
+.story-series-sponsor {
+  color: #999;
+  font-size: 0.625rem; }
+
+.story-series-title {
+  text-transform: uppercase;
+  color: #009bff;
+  font-family: "Futura Today Screen", Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0.625rem 0; }
+
+.story-series-sponsor-text {
+  padding: 1rem 0.25rem 0.25rem 0;
+  display: block;
+  float: left; }
+
+.story-time {
+  color: #999999;
+  font-size: 0.9rem;
+  font-family: "Futura Today Screen", Helvetica, sans-serif;
+  top: -1px;
+  position: relative; }
+
+.share-tools a {
+  border: 1px solid #ababab;
+  border-radius: 20%/50%;
+  display: inline-block;
+  padding: 0.6em 1.1em 0.6em 2.3em;
+  margin: 0 25px 1em 25px;
+  background-repeat: no-repeat;
+  font-size: 0.75rem;
+  line-height: normal; }
+
+.share-tools-article {
+  background-size: 1.2em 1.2em;
+  background-position: 0.9em 0.6em; }
+
+ html.theme-dark {
+  background: #333333;
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+body.theme-dark {
+  background: #333333;
+  color: #999; }
+  body.theme-dark h1 {
+    color: #fff; }
+  body.theme-dark h2, body.theme-dark h3, body.theme-dark .story-body {
+    color: #f0f0f0; }
+  body.theme-dark .asset-photo-caption, body.theme-dark .asset-photo-credit {
+    color: #262626; }
+  body.theme-dark .story-series-title {
+    color: #009bff; }
+  body.theme-dark .story-lede .asset-photo-credit {
+    color: #eee; }
+  body.theme-dark .share-tools a {
+    border-color: #555; }
+
+@media (min-width: 750px) {
+  article.story {
+    width: 700px;
+    margin: 0 auto; }
+
+  .story-headline {
+    font-size: 2.1rem; }
+
+  .story-header {
+    margin: 25px 0; }
+
+  .story-header-group {
+    margin-right: 4em;
+    font-size: 1rem; }
+
+  .story-header-spliter {
+    display: inline-block;
+    position: relative;
+    top: -1px; }
+
+  .story-byline {
+    display: inline-block;
+    font-size: 1rem; }
+
+  .story-time {
+    display: inline-block;
+    font-size: 1rem; }
+
+  .story-body {
+    line-height: 1.6em; }
+
+  .asset {
+    margin: 3.125rem 0; }
+
+  .asset-photo-credit {
+    font-size: 1.4rem; }
+
+  .asset-photo-caption {
+    font-size: 0.95rem;
+    padding: 1.3rem;
+    min-height: 40px; }
+    .asset-photo-caption .asset-photo-credit {
+      font-size: 0.95rem; }
+
+  .asset-photo-float-right, .story-lede .asset-photo-float-right {
+    float: right;
+    margin: 0 1.5625rem 1.5625rem 3.125rem;
+    padding: 0; }
+
+  .asset-photo-float-left {
+    float: left;
+    margin-right: 3.125rem;
+    margin-bottom: 1.5625rem;
+    padding: 0; }
+
+  .blog-logo img {
+    max-width: 250px; }
+
+  .story-lede .asset-photo-credit {
+    font-size: 0.75em;
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif; } }
+section.device-tablet .asset-photo-float-right, section.device-tablet .story-lede .asset-photo-float-right {
+  float: right;
+  margin: 0 1.5625rem 1.5625rem 3.125rem;
+  padding: 0; }
+section.device-tablet .asset-photo-float-left {
+  float: left;
+  margin-right: 3.125rem;
+  margin-bottom: 1.5625rem;
+  padding: 0; }
+
+.theme-news .presto-h1,
+.theme-news .presto-h2,
+.theme-news .presto-h3,
+.theme-news .presto-h4,
+.theme-news .presto-h5,
+.theme-news .presto-h6 {
+  color: #009afc; }
+
+.theme-home .presto-h1,
+.theme-home .presto-h2,
+.theme-home .presto-h3,
+.theme-home .presto-h4,
+.theme-home .presto-h5,
+.theme-home .presto-h6 {
+  color: #009afc; }
+
+.theme-sports .presto-h1,
+.theme-sports .presto-h2,
+.theme-sports .presto-h3,
+.theme-sports .presto-h4,
+.theme-sports .presto-h5,
+.theme-sports .presto-h6 {
+  color: #ec1b24; }
+
+.theme-life .presto-h1,
+.theme-life .presto-h2,
+.theme-life .presto-h3,
+.theme-life .presto-h4,
+.theme-life .presto-h5,
+.theme-life .presto-h6 {
+  color: #91268e; }
+
+.theme-money .presto-h1,
+.theme-money .presto-h2,
+.theme-money .presto-h3,
+.theme-money .presto-h4,
+.theme-money .presto-h5,
+.theme-money .presto-h6 {
+  color: #00ab4d; }
+
+.theme-tech .presto-h1,
+.theme-tech .presto-h2,
+.theme-tech .presto-h3,
+.theme-tech .presto-h4,
+.theme-tech .presto-h5,
+.theme-tech .presto-h6 {
+  color: #f89d33; }
+
+.theme-travel .presto-h1,
+.theme-travel .presto-h2,
+.theme-travel .presto-h3,
+.theme-travel .presto-h4,
+.theme-travel .presto-h5,
+.theme-travel .presto-h6, .theme-experience .presto-h1,
+.theme-experience .presto-h2,
+.theme-experience .presto-h3,
+.theme-experience .presto-h4,
+.theme-experience .presto-h5,
+.theme-experience .presto-h6 {
+  color: #33c3df; }
+
+.theme-weather .presto-h1,
+.theme-weather .presto-h2,
+.theme-weather .presto-h3,
+.theme-weather .presto-h4,
+.theme-weather .presto-h5,
+.theme-weather .presto-h6 {
+  color: #ffcc00; }
+
+.theme-opinion .presto-h1,
+.theme-opinion .presto-h2,
+.theme-opinion .presto-h3,
+.theme-opinion .presto-h4,
+.theme-opinion .presto-h5,
+.theme-opinion .presto-h6 {
+  color: #666; }
+
+.asset-native {
+  padding: 0;
+  margin: 1.484375rem auto; }
+
+.asset-native-float-inline {
+  display: inline-block;
+  margin: 0; }
+
+@media (min-width: 750px) {
+  .asset-native {
+    margin: 3.125rem auto; }
+
+  .asset-native-float-inline {
+    margin: 0; }
+
+  .asset-native-float-right {
+    float: right;
+    margin: 1.484375rem 1.5625rem 1.5625rem 3.125rem; }
+
+  .asset-native-float-left {
+    float: left;
+    margin-right: 3.125rem;
+    margin-bottom: 1.5625rem; } }
+section.device-tablet .asset-native-float-inline {
+  margin: 0; }
+section.device-tablet .asset-native-float-right {
+  float: right;
+  margin: 1.484375rem 1.5625rem 1.5625rem 3.125rem; }
+section.device-tablet .asset-native-float-left {
+  float: left;
+  margin-right: 3.125rem;
+  margin-bottom: 1.5625rem; }
+
+.asset-oembed-photo img {
+  width: 100%; }
+
+.asset-twitter iframe {
+  margin: 10px auto !important; }
+
+.story-body p.oembed-link-title {
+  font-size: 0.75rem;
+  padding-top: 10px; }
+
+.story-body p.oembed-link-desc {
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
+  font-size: 0.9rem;
+  color: #030303; }
+
+.story-body div.oembed-link-thumbnail {
+  padding: 10px; }
+
+@media (min-width: 750px) {
+  .story-body p.oembed-link-title {
+    font-size: 0.75rem; }
+
+  .story-body p.oembed-link-desc {
+    font-size: 1.15rem; } }
+.pullquote {
+  font-family: "Futura Today Screen", Helvetica, sans-serif;
+  font-style: italic;
+  line-height: 1.2;
+  border-left: 1px solid #aaa;
+  padding-left: 1.5625rem;
+  margin: 2.9rem 1rem 2.9rem 1.5rem; }
+  .pullquote blockquote {
+    font-size: 1.25em;
+    font-weight: 100;
+    color: #009bff;
+    margin: 0 0 0.5em 0;
+    line-height: 1.4; }
+  .pullquote .pullquote-attribution {
+    font-size: 0.8em;
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue Light", "HelveticaNeue-Light", Helvetica, sans-serif;
+    color: #2e2e2e; }
+
+body.theme-dark .pullquote-attribution {
+  color: #aaa; }
+
+@media (min-width: 750px) {
+  .pullquote {
+    float: right;
+    width: 300px;
+    line-height: 1.5;
+    margin-bottom: 1.4rem;
+    margin-top: 0;
+    font-family: "Futura Today Light", "Futura Today Screen", "HelveticaNeue-Light", Helvetica, sans-serif; }
+    .pullquote blockquote {
+      font-size: 1.75rem;
+      line-height: 1.3; }
+    .pullquote .pullquote-attribution {
+      font-size: 0.8em; } }
+section.device-tablet .pullquote {
+  float: right;
+  width: 300px;
+  margin-bottom: 1.4rem;
+  margin-top: 0; }
+
+.asset-video, .asset-video-playlist {
+  position: relative; }
+  .asset-video img, .asset-video-playlist img {
+    display: block; }
+
+.asset-video-caption, .asset-playlist-caption {
+  text-align: center;
+  padding: 15px 25px;
+  background: #fff;
+  color: #030303;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  border-bottom: 1px solid #e1e1e1; }
+
+.asset-video-caption span, .asset-playlist-caption p {
+  display: inline-block;
+  max-width: 400px;
+  margin: 0 auto; }
+
+.asset-video-prompt {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(31, 31, 31, 0.8);
+  width: 86px;
+  height: 86px;
+  color: #fff;
+  display: none; }
+
+.asset-video-prompt.initialized {
+  display: inherit; }
+
+.asset-video-duration, .asset-video-count {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 86px;
+  text-align: center;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", "HelveticaNeue", Helvetica, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2rem; }
+
+.asset-video-icon {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid transparent;
+  border-bottom: 12.5px solid transparent;
+  border-left: 17px solid #fff;
+  top: 27px;
+  left: 38px; }
+
+.story-lede .asset-video-caption {
+  display: none; }
+
+.asset-video-playlist .asset-video-icon {
+  top: 18px; }
+.asset-video-playlist .asset-video-count {
+  top: 46px; }
+.asset-video-playlist .asset-playlist-caption a {
+  font-family: "Futura Today Screen", Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1em; }
+.asset-video-playlist .splitter {
+  padding: 0 0.2em; }
+
+@media (min-width: 750px) {
+  .asset-video-caption {
+    font-size: 0.9rem;
+    min-height: 40px; } }
+section {
+  position: relative;
+  overflow-x: hidden; }
+
+.resize-sensor, .resize-sensor > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; }
+
+section.contents {padding: 0 0 0 0;}

@@ -1,0 +1,46 @@
+
+@font-face {
+    font-family: 'Futura Today Screen';
+    src: url('../fonts/Futura Today Screen Normal.ttf');
+}
+
+@font-face {
+    font-family: 'Futura Today Bold';
+    src: url('../fonts/Futura Today Screen Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Futura Today Light';
+    src: url('../fonts/Futura Today Screen Light.ttf');
+}
+
+@font-face {
+    font-family: 'Futura Today Demibold';
+    src: url('../fonts/Futura Today Screen DemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Black';
+    src: url('../fonts/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+.share-tools-article { background-image: url('../images/share-light.png'); }
+
+body.theme-dark .share-tools-article { background-image: url('../images/share-dark.png'); }
+
+/* Retina Resources */
+@media (min-resolution: 192dpi),(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5) {
+
+    .share-tools-article { background-image: url('../images/share-light2x.png'); }
+    body.theme-dark .share-tools-article { background-image: url('../images/share-dark2x.png'); }
+}
